@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- TODO:  리사이클러뷰가 바로 나오는게 아니고 리스트 탭을 클릭해야 나옴-->
+
+    <item
+        android:id="@+id/itemlistFragment"
+        android:title="@string/item_list_title" />
+    <item
+        android:id="@+id/mylistFragment"
+        android:title="@string/my_item_title" />
+
+</menu>

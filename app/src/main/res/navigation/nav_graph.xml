@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/main">
+
+    <!-- TODO: 시작화면이 안잡히고 바로 itemlist로간다. 고쳐야함 -->
+
+
+
+    <fragment
+        android:id="@+id/main"
+        android:name="com.example.howmuch.ui.main"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_main_to_signinFragment2"
+            app:destination="@id/signinFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemlistFragment"
+        android:name="com.example.howmuch.ui.ItemlistFragment"
+        android:label="fragment_itemlist"
+        tools:layout="@layout/fragment_itemlist" >
+        <action
+            android:id="@+id/action_itemlistFragment_to_listdetailFragment"
+            app:destination="@id/listdetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mylistFragment"
+        android:name="com.example.howmuch.ui.MylistFragment"
+        android:label="fragment_mylist"
+        tools:layout="@layout/fragment_mylist" />
+    <fragment
+        android:id="@+id/listdetailFragment"
+        android:name="com.example.howmuch.ui.ListdetailFragment"
+        android:label="fragment_listdetail"
+        tools:layout="@layout/fragment_listdetail" >
+        <argument
+            android:name="idx"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/signinFragment2"
+        android:name="com.example.howmuch.ui.SigninFragment"
+        android:label="fragment_signin"
+        tools:layout="@layout/fragment_signin" >
+        <action
+            android:id="@+id/action_signinFragment2_to_itemlistFragment"
+            app:destination="@id/itemlistFragment" />
+    </fragment>
+</navigation>
