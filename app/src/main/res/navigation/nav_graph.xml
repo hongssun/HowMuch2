@@ -12,7 +12,7 @@
     <fragment
         android:id="@+id/main"
         android:name="com.example.howmuch.ui.main"
-        android:label="fragment_main"
+        android:label="메인화면"
         tools:layout="@layout/fragment_main" >
         <action
             android:id="@+id/action_main_to_signinFragment2"
@@ -21,7 +21,7 @@
     <fragment
         android:id="@+id/itemlistFragment"
         android:name="com.example.howmuch.ui.ItemlistFragment"
-        android:label="fragment_itemlist"
+        android:label="경매목록"
         tools:layout="@layout/fragment_itemlist" >
         <action
             android:id="@+id/action_itemlistFragment_to_listdetailFragment"
@@ -30,12 +30,16 @@
     <fragment
         android:id="@+id/mylistFragment"
         android:name="com.example.howmuch.ui.MylistFragment"
-        android:label="fragment_mylist"
-        tools:layout="@layout/fragment_mylist" />
+        android:label="내 입찰 목록"
+        tools:layout="@layout/fragment_mylist" >
+        <action
+            android:id="@+id/action_mylistFragment_to_mylistdetailFragment"
+            app:destination="@id/mylistdetailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/listdetailFragment"
         android:name="com.example.howmuch.ui.ListdetailFragment"
-        android:label="fragment_listdetail"
+        android:label="상세설명"
         tools:layout="@layout/fragment_listdetail" >
         <argument
             android:name="idx"
@@ -44,10 +48,16 @@
     <fragment
         android:id="@+id/signinFragment2"
         android:name="com.example.howmuch.ui.SigninFragment"
-        android:label="fragment_signin"
+        android:label="로그인"
         tools:layout="@layout/fragment_signin" >
         <action
             android:id="@+id/action_signinFragment2_to_itemlistFragment"
-            app:destination="@id/itemlistFragment" />
+            app:destination="@id/itemlistFragment"
+            app:popUpTo="@+id/main" />
     </fragment>
+    <fragment
+        android:id="@+id/mylistdetailFragment"
+        android:name="com.example.howmuch.ui.mylistdetailFragment"
+        android:label="fragment_mylistdetail"
+        tools:layout="@layout/fragment_mylistdetail" />
 </navigation>
