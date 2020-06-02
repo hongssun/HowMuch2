@@ -14,23 +14,23 @@ import kotlinx.android.synthetic.main.fragment_itemlist.*
 
 class MainActivity : AppCompatActivity(){
     val itemRepository = arrayListOf(
-        ItemData("마우스",1000),
-        ItemData("키보드",5000),
-        ItemData("냉장고",325000),
-        ItemData("마이크",5000),
-        ItemData("마우스",1000),
-        ItemData("키보드",5000),
-        ItemData("냉장고",325000),
-        ItemData("마이크",5000),
-        ItemData("마우스",1000),
-        ItemData("키보드",5000),
-        ItemData("냉장고",325000),
-        ItemData("마이크",5000),
-        ItemData("마우스",1000),
-        ItemData("키보드",5000),
-        ItemData("냉장고",325000),
-        ItemData("마이크",5000),
-        ItemData("오징어",5000)
+        ItemData(R.drawable.ball1,"농구공",1000),
+        ItemData(R.drawable.bicycle1,"자전거",5000),
+        ItemData(R.drawable.cosmetics1,"화장품",325000),
+        ItemData(R.drawable.cube1,"큐브",5000),
+        ItemData(R.drawable.cup1,"컵",1000),
+        ItemData(R.drawable.doll1,"인형",5000),
+        ItemData(R.drawable.earphones1,"이어폰",325000),
+        ItemData(R.drawable.hat1,"모자",5000),
+        ItemData(R.drawable.pan1,"선풍기",1000),
+        ItemData(R.drawable.phone1,"핸드폰",5000),
+        ItemData(R.drawable.shirt1,"셔츠",325000),
+        ItemData(R.drawable.shoes1,"신발",5000),
+        ItemData(R.drawable.stove1,"오븐",1000),
+        ItemData(R.drawable.toy1,"장난감",5000),
+        ItemData(R.drawable.umbrella1,"우산",325000),
+        ItemData(R.drawable.wallet1,"지갑",5000),
+        ItemData(R.drawable.watch1,"시계",5000)
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,9 +40,9 @@ class MainActivity : AppCompatActivity(){
         bottomNavigationView?.setOnNavigationItemSelectedListener(this)*/
 
         //없어도 되는 코드
-        NavigationUI.setupWithNavController(
+        /*NavigationUI.setupWithNavController(
             bottom_navigation, findNavController(R.id.navigation_host)
-        )
+        )*/
 
 
 

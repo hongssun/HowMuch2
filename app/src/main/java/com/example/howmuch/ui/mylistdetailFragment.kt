@@ -11,15 +11,15 @@ import com.example.howmuch.R
 /**
  * A simple [Fragment] subclass.
  */
-class ListdetailFragment : Fragment() {
+class mylistdetailFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_listdetail, container, false)
+        return inflater.inflate(R.layout.fragment_mylistdetail, container, false)
     }
 
-//버튼 누르면 데이터 mylistfragment로 보내기
+
 }
