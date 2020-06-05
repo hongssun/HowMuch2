@@ -2,10 +2,13 @@ package com.example.howmuch
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
+import com.example.howmuch.ui.ItemlistFragment
+import com.example.howmuch.ui.MylistFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_itemlist.*
@@ -35,11 +38,30 @@ class MainActivity : AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        /*val bottomNavigationView = findViewById<View>(R.id.bottom_navigation) as BottomNavigationView
-        bottomNavigationView?.setOnNavigationItemSelectedListener(this)*/
-/*
-        NavigationUI.setupWithNavController(
-            bottom_navigation, findNavController(R.id.navigation_host)
-        )*/
+
+        /*loadFragment(ItemlistFragment())
+
+        bottom_navigation.setOnNavigationItemSelectedListener {menuItem ->
+            when(menuItem.itemId){
+                R.id.itemlistFragment -> {
+                    loadFragment(ItemlistFragment())
+                    return@setOnNavigationItemSelectedListener true
+                }
+                R.id.mylistFragment -> {
+                    loadFragment(MylistFragment())
+                    return@setOnNavigationItemSelectedListener true
+                }
+                else -> {
+                    return@setOnNavigationItemSelectedListener false
+                }
+
+            }
+
+        }*/
+    }
+    private fun loadFragment(fragment : Fragment){
+        supportFragmentManager.beginTransaction().also{fragmentTransaction ->
+            fragmentTransaction.replace(R.id.fragmentContainer, fragment).commit()
+        }
     }
 }
