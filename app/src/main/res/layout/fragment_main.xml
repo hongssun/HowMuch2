@@ -19,7 +19,7 @@
         app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@drawable/logo" />
+        android:src="@drawable/logo" />
 
     <Button
         android:id="@+id/start_button"
