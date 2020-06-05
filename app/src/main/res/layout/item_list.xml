@@ -7,8 +7,6 @@
     android:background="@android:color/background_light"
     tools:layout_editor_absoluteY="81dp">
 
-    <!-- TODO:  화면이 크게 나오고 꽉차지 않음-->
-
     <TextView
         android:id="@+id/name_tv"
         android:layout_width="102dp"

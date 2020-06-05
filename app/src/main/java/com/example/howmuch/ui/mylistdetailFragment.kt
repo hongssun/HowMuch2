@@ -8,9 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.howmuch.R
 
-/**
- * A simple [Fragment] subclass.
- */
+
 class mylistdetailFragment : Fragment() {
 
     override fun onCreateView(

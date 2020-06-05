@@ -18,12 +18,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/datail_name_tv"
+        android:id="@+id/detail_name_tv"
         android:layout_width="176dp"
         android:layout_height="55dp"
         android:layout_marginTop="48dp"
-        android:text="TextView"
+        android:text=""
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.144"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/detail_img" />
 
@@ -31,11 +33,13 @@
         android:id="@+id/detail_price_tv"
         android:layout_width="171dp"
         android:layout_height="61dp"
-        android:layout_marginTop="44dp"
-        android:text="TextView"
+        android:layout_marginTop="36dp"
+        android:text=""
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.112"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/datail_name_tv" />
+        app:layout_constraintTop_toBottomOf="@+id/detail_name_tv" />
 
     <Button
         android:id="@+id/add_list_btn"

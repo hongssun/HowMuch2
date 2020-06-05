@@ -7,7 +7,7 @@
     tools:context=".ui.MylistFragment">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/message_rv"
+        android:id="@+id/myItem_rv"
         android:layout_width="410dp"
         android:layout_height="640dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
