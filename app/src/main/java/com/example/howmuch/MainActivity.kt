@@ -3,9 +3,11 @@ package com.example.howmuch
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_itemlist.*
 
 
@@ -35,7 +37,9 @@ class MainActivity : AppCompatActivity(){
         setContentView(R.layout.activity_main)
         /*val bottomNavigationView = findViewById<View>(R.id.bottom_navigation) as BottomNavigationView
         bottomNavigationView?.setOnNavigationItemSelectedListener(this)*/
-
-
+/*
+        NavigationUI.setupWithNavController(
+            bottom_navigation, findNavController(R.id.navigation_host)
+        )*/
     }
 }

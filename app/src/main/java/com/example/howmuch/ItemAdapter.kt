@@ -27,6 +27,7 @@ class ItemAdapter(val items: ArrayList<ItemData>) : RecyclerView.Adapter<ItemAda
             item.name_tv.text = items.ItemName
             item.price_tv.text = items.ItemPrice.toString()
             item.img_res.setImageResource(items.imgRes)
+
             item.setOnClickListener{
                 val bundle = Bundle().apply { putInt("idx", position) }
 

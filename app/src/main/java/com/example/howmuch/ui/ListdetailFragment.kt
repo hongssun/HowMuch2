@@ -24,13 +24,7 @@ class ListdetailFragment : Fragment() {
         // Inflate the layout for this fragment
         val root = inflater.inflate(R.layout.fragment_listdetail, container, false)
 
-        add_list_btn.setOnClickListener  {
-            val items = (requireContext() as MainActivity).itemRepository
-            it?.let{
-                it.myItem_rv.adapter = MyItemAdapter(items)
-                it.myItem_rv.layoutManager = LinearLayoutManager(requireContext())
-            }
-        }
+
 
         return root
     }

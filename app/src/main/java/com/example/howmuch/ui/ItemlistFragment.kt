@@ -25,23 +25,14 @@ class ItemlistFragment : Fragment() {
     ): View? {
 
         return inflater.inflate(R.layout.fragment_itemlist, container, false)
-
     }
-
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-
         val items = (requireContext() as MainActivity).itemRepository
-
-
         view?.let{
             it.message_rv.adapter = ItemAdapter(items)
             it.message_rv.layoutManager = LinearLayoutManager(requireContext())
-
-
         }
-
-
     }
 }
