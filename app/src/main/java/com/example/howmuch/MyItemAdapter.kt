@@ -8,7 +8,8 @@ import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.item_list.view.*
 
-class ItemAdapter(val items: ArrayList<ItemData>) : RecyclerView.Adapter<ItemAdapter.ViewHolder>(){
+class MyItemAdapter(val items: ArrayList<ItemData>) : RecyclerView.Adapter<MyItemAdapter.ViewHolder>(){
+
 
     override fun getItemCount() = items.size
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -16,24 +17,14 @@ class ItemAdapter(val items: ArrayList<ItemData>) : RecyclerView.Adapter<ItemAda
 
         return ViewHolder(rootView)
     }
-
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bindItem(items[position])
-    }
 
+    }
 
     inner class ViewHolder(val item: View) : RecyclerView.ViewHolder(item) {
         fun bindItem(items : ItemData){
-            item.name_tv.text = items.ItemName
-            item.price_tv.text = items.ItemPrice.toString()
-            item.img_res.setImageResource(items.imgRes)
-            item.setOnClickListener{
-                val bundle = Bundle().apply { putInt("idx", position) }
 
-                Navigation.findNavController(item).navigate(R.id.action_itemlistFragment_to_listdetailFragment, bundle)
-
-
-            }
 
         }
     }

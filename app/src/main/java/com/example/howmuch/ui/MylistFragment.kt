@@ -9,12 +9,11 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.howmuch.ItemAdapter
 import com.example.howmuch.MainActivity
+import com.example.howmuch.MyItemAdapter
 import com.example.howmuch.R
 import kotlinx.android.synthetic.main.fragment_itemlist.view.*
 
-/**
- * A simple [Fragment] subclass.
- */
+
 class MylistFragment : Fragment() {
 
     override fun onCreateView(
@@ -30,11 +29,8 @@ class MylistFragment : Fragment() {
         val items = (requireContext() as MainActivity).itemRepository
 
         view?.let{
-            it.message_rv.adapter = ItemAdapter(items)
+            it.message_rv.adapter = MyItemAdapter(items)
             it.message_rv.layoutManager = LinearLayoutManager(requireContext())
-
-
         }
     }
-
 }
