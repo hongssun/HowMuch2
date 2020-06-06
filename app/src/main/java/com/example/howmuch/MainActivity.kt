@@ -39,29 +39,7 @@ class MainActivity : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        /*loadFragment(ItemlistFragment())
 
-        bottom_navigation.setOnNavigationItemSelectedListener {menuItem ->
-            when(menuItem.itemId){
-                R.id.itemlistFragment -> {
-                    loadFragment(ItemlistFragment())
-                    return@setOnNavigationItemSelectedListener true
-                }
-                R.id.mylistFragment -> {
-                    loadFragment(MylistFragment())
-                    return@setOnNavigationItemSelectedListener true
-                }
-                else -> {
-                    return@setOnNavigationItemSelectedListener false
-                }
-
-            }
-
-        }*/
     }
-    private fun loadFragment(fragment : Fragment){
-        supportFragmentManager.beginTransaction().also{fragmentTransaction ->
-            fragmentTransaction.replace(R.id.fragmentContainer, fragment).commit()
-        }
-    }
+
 }
