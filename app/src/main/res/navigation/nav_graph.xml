@@ -59,4 +59,14 @@
         android:name="com.example.howmuch.ui.mylistdetailFragment"
         android:label="fragment_mylistdetail"
         tools:layout="@layout/fragment_mylistdetail" />
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.example.howmuch.ui.addFragment"
+        android:label="fragment_add"
+        tools:layout="@layout/fragment_add" >
+        <action
+            android:id="@+id/action_addFragment_to_itemlistFragment"
+            app:destination="@id/itemlistFragment"
+            app:popUpTo="@id/itemlistFragment" />
+    </fragment>
 </navigation>

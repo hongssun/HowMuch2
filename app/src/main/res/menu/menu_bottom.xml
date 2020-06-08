@@ -11,4 +11,9 @@
         android:icon="@drawable/ic_checkbox"
         android:title="@string/my_item_title" />
 
+    <item
+        android:id="@+id/addFragment"
+        android:icon="@drawable/ic_add"
+        android:title="@string/add_item" />
+
 </menu>
